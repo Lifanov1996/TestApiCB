@@ -14,7 +14,12 @@ namespace TestApiCb.Controllers
             _currencyRepositiry = currencyRepositiry;
         }
 
-
+        /// <summary>
+        /// Возвращает список валют
+        /// </summary>
+        /// <param name="pageNum">Номер страницы</param>
+        /// <param name="pageSize">Колличество элементов на странице</param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<List<Valutes>>> GetValuteAllAsync(int? pageNum = null, int? pageSize = null)
         {
